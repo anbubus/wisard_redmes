@@ -104,9 +104,9 @@ for key in patterns:
 ### untrain
 This will untrain an input trained before or a list of inputs trained before.
 ```python
-x = [1,1,1,0,0,0,0,0]
+x = BinInput([1,1,1,0,0,0,0,0])
 
-ds = DataSet(x, "cold")
+ds = DataSet([x], ["cold"])
 wsd.untrain(ds)
 
 X = [
