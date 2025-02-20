@@ -1,9 +1,9 @@
-# RegressionWisard
+# ClusRegressionWisard
 ## constructor:
 ```python
 from wisardpkg import RegressionWisard
 
-rew = RegressionWisard(
+crew = ClusRegressionWisard(
 addressSize=3            # required
 minScore,                # optional
 threshold,               # optional
@@ -19,6 +19,9 @@ numberOfTrainings=0      # optional
 ```
 The default value for the optional parameters are showing in the example above.
 - **addressSize: [int]** is the size of addressing RAM.
+- **minScore: [float]** is the minimum score accept by clusregressionwisard to choose to create a rew. Must be between 0 and 1.
+- **threshold: [int]** is the limit of examples learned by a rew.
+- **limit: [int]** is the limit of rews by cluster in supervised and semi-supervised learning.
 - **completeAddressing: [boolean]** this enable or disable the automatic complete of addressing in the case when the size of entry is not divisible by address size, this create redundant information, but address all indexes of entry.
 - **orderedMapping: [boolean]** Indicates whether the RAM mapping should be used.
 - **minOne: [int]** Minimun number of ones bits allowed in an address.
@@ -49,7 +52,7 @@ y = [
     ]
 # create a DataSet object
 ds = DataSet(X, y)
-rew.train(ds)
+crew.train(ds)
 ```
 ### predict
 Predicts the outputs for a dataset.
@@ -65,20 +68,20 @@ X = [
 ds = DataSet(X)
 
 # the output is a list of predicted y values
-predicted = rew.predict(ds)
+predicted = crew.predict(ds)
 ```
 ### getsizeof
 This returns the model size.
 ```python
-print(rew.getsizeof())
+print(crew.getsizeof())
 ```
 ### json
 This return the configuration and ram values as JSON format converted to string.
 This return the configuration and ram values as JSON format converted to string.
 ```python
-print("RegressionWisard: ", rew.json())
+print("ClusRegressionWisard: ", crew.json())
 # or pass true as parameter to save ram data in files (this is useful for huge rams)
-print("RegressionWisard: ", rew.json("path/to/save/data"))
+print("ClusRegressionWisard: ", crew.json("path/to/save/data"))
 ```
 ### setMeanFunc
 Updates the mean computation method used in predictions.
