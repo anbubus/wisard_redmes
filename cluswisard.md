@@ -160,13 +160,58 @@ for key in patterns:
 ```
 ### json
 This return the configuration and ram values as JSON format converted to string.
+```python
+print("ClusWisard: ", clus.json())
+# or pass true as parameter to save ram data in files (this is useful for huge rams)
+print("ClusWisard: ", clus.json("path/to/save/data"))
+
+```
 ### getsizeof
 This returns the model size.
+```python
+print(clus.getsizeof())
+
+```
 ### rank
 Returns a class rank based on the discriminators votes to an input or a list of inputs.
+```python
+X = [
+      [1,1,1,0,0,0,0,0],
+      [1,1,1,1,0,0,0,0],
+      [0,0,0,0,1,1,1,1],
+      [0,0,0,0,0,1,1,1]
+]
+
+ds = wp.DataSet(X)
+clus.rank(ds)
+
+```
 ### rankUnsupervised
 Returns classification scores using the unsupervised cluster.
+```python
+
+
+
+```
 ### getAllScores
 Retrieves scores for all classes for a given input.
+```python
+X = [
+      [1,1,1,0,0,0,0,0],
+      [1,1,1,1,0,0,0,0],
+      [0,0,0,0,1,1,1,1],
+      [0,0,0,0,0,1,1,1]
+]
+
+ds = wp.DataSet(X)
+clus.getAllScores(ds)
+
+```
 ### setMinScore, setThreshold, setDiscriminatorsLimit
 Allow modifying the model parameters after initialization.
+```python
+clus.setMinScore(0.1)
+clus.setThreshold(10)
+clus.setMinScore(5)
+
+```
