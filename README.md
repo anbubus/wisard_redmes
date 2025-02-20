@@ -7,7 +7,7 @@ addressSize=3
 wsd = Wisard(
    addressSize,              # required
    verbose=False,            # optional
-   balanced=False,           #optional
+   balanced=False,           # optional
    ignoreZero=False,         # optional
    completeAddressing=True,  # optional
    indexes=[],               # optional
