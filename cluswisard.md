@@ -65,8 +65,8 @@ clus.train(ds)
 
 ds2 = DataSet(X,y2)
 
-# to semi-supervised learning
-clus.train(ds2)
+# to unsupervised learning
+clus.trainUnsupervised(ds2)
 
 ```
 Keep in mind that when a dataset is passed to this method, first it will train with supervised piece and after it will train with unsupervised piece.
