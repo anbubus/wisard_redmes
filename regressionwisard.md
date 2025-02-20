@@ -48,8 +48,6 @@ y = [
 ds = DataSet(X, y)
 rew.train(ds)
 ```
-### calculateFit
-### applyFit
 ### predict
 Predicts the outputs for a dataset.
 ```python
@@ -66,16 +64,6 @@ ds = DataSet(X)
 # the output is a list of predicted y values
 predicted = rew.predict(ds)
 ```
-### getVotes
-Returns the raw votes from all RAM units.
-```python
-print(rew.getVotes())
-```
-### getNumberOfTrainings
-Returns the total number of training iterations performed.
-```python
-print(rew.NumberOfTrainings())
-```
 ### getsizeof
 This returns the model size.
 ```python
@@ -87,6 +75,10 @@ This return the configuration and ram values as JSON format converted to string.
 ```python
 print("RegressionWisard: ", rew.json())
 # or pass true as parameter to save ram data in files (this is useful for huge rams)
+print("RegressionWisard: ", rew.json("path/to/save/data"))
+```
+### setMeanFunc
+Updates the mean computation method used in predictions. files (this is useful for huge rams)
 print("RegressionWisard: ", rew.json("path/to/save/data"))
 ```
 ### setMean
