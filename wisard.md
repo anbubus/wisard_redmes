@@ -127,7 +127,7 @@ This return the configuration and ram values as JSON format converted to string.
 ```python
 print("Wisard: ", wsd.json())
 # or pass true as parameter to save ram data in files (this is useful for huge rams)
-print("Wisard: ", wsd.json(True,"path/to/save/data"))
+print("Wisard: ", wsd.json("path/to/save/data"))
 ```
 ### rank
 Returns a class rank based on the discriminators votes to an input or a list of inputs.
@@ -151,11 +151,11 @@ X = [
 ]
 
 ds = DataSet(X)
-out = wsd.rank(ds)
+ranks = wsd.rank(ds)
 
 
 for r in ranks:
-    print(r, ranks[r])
+    print(r)
 
 ```
 ### getsizeof
@@ -166,8 +166,9 @@ print("Model size: ", wsd.getsizeof())
 ### getTupleSizes
 Returns the size of each discriminator.
 ```python
-for r in wsd.getTupleSizes():
-    print("Discriminator size", r)
+ranks =  wsd.getTupleSizes()
+for r in ranks:
+    print(r, ranks[r])
 
 ```
 
