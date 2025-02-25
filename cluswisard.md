@@ -3,7 +3,7 @@
 ```python
 from wisardpkg import ClusWisard
 
-addressSize = 3 
+addressSize = 8 
 minScore = 0.1 
 threshold = 10
 discriminatorLimit = 5
@@ -52,21 +52,10 @@ y = [
       "hot"
     ]
 
-# load label data, which must be a dictionary with key integer and value string
-y2 = {
-       1: "cold",
-       2: "hot
-     }
-
 ds = DataSet(X,y)
 
 # to supervised learning
 clus.train(ds)
-
-ds2 = DataSet(X,y2)
-
-# to unsupervised learning
-clus.trainUnsupervised(ds2)
 
 ```
 Keep in mind that when a dataset is passed to this method, first it will train with supervised piece and after it will train with unsupervised piece.
