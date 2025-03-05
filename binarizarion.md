@@ -12,9 +12,9 @@ ther = SimpleThermometer(
 )
 ```
 The default value for the optional parameters are showing in the example above.
--**thermometerSize: [int]** number of divisions for the thermometer scale.
--**minimum: [double]** minimum value for the interval.
--**maximum: [double]** maximum value for the interval.
+- **thermometerSize: [int]** number of divisions for the thermometer scale.
+- **minimum: [double]** minimum value for the interval.
+- **maximum: [double]** maximum value for the interval.
 
 ## methods:
 ### getSize
