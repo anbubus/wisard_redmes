@@ -2,7 +2,6 @@
 The main purposeof this class is to store and manipulate **binary values** efficiently.  
 ## constructors:
 ```python
-bin = BinInput()             # initializes as an empty bin object
 bin1 = BinInput(size = 4)    # initializes as an empty bin object with a especifc size
 bin2 = BinInput([1,0,0,1,1]) # initializes with a short vector of 0 and 1
 ```
