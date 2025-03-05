@@ -48,8 +48,5 @@ ds.set(0, BinInput([1,1,1,1]))
 ### size
 Returns the number of data stored.
 ```python
-bin2.set(2, 1)
-
-out = bin2.list()
-print(out) # [1,1,0,1,1]
+ds.size() # for this given example, the retun should be 2
 ```
