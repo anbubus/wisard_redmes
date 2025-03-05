@@ -23,7 +23,7 @@ This method returns the number of divisions the thermometer has.
 ther_size = ther.getSize()
 ```
 ### transform
-This method binarizes the input data. It returns a BinInput object with all the data together in a single array. 
+This method binarizes the input data. It returns a BinInput object with all the encoded data together in a single array. 
 ```python
 
 # load input data, set of numbers in the interval [0, 10] 
