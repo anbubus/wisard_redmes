@@ -50,7 +50,7 @@ num = len(X)                                    # number of inputs
 ther_size = int(ther.getSize())                 # divisions 4
 X_reshaped = X_bin_list.reshape(num, ther_size) # reshaping to [5, 4]
 ```
-The output of X_reshaped:
+X_reshaped should look like this:
 ```python
 array([[1, 0, 0, 0],
        [1, 1, 0, 0],
