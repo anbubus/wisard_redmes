@@ -30,7 +30,7 @@ thermometerSizes = [4, 10]
 minimum = [0.0, 10.0]
 maximum = [10.0, 40.0]
 
-di = DynamicThermometer(thermometerSizes=thermometerSizes, minimum=minimum, maximum=maximum)
+dy = DynamicThermometer(thermometerSizes=thermometerSizes, minimum=minimum, maximum=maximum)
 # load input data, set of numbers in the interval [0, 10]. Same size of the thermometer array.
 X = [
      4.0, 27.2 
