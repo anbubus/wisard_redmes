@@ -16,11 +16,7 @@ bin_index = bin.get(index)
 This method returns all stored bits as a short vector.
 ```python
 out = bin2.list()
-print(out)
-```
-For this example, the output should look like this.
-```python
-[1,0,0,1,1]
+print(out) # [1,0,0,1,1]
 ```
 ### set
 Modifies a specific bit at index, setting it to 1 or 0.
@@ -28,11 +24,7 @@ Modifies a specific bit at index, setting it to 1 or 0.
 bin2.set(2, 1)
 
 out = bin2.list()
-print(out)
-```
-The new bin value.
-```python
-[1,1,0,1,1]
+print(out) # [1,1,0,1,1]
 ```
 ### size
 Returns the number of stored bits.
@@ -41,7 +33,16 @@ bin2.size() # returns 5
 ```
 ### data
 This method encodes the bits into a Base64 string.
+```python
+encoded = bin2.data()
+```
 ### extend
 Allows concatenating two **BinInput** objects, or when receiving a short vector it's appends the values to the current object.
+```python
+bin2.extend([1,0,1])
+```
 ### setConfig
 Adjust the number of bytes required to store **size** bits.
+```python
+bin.setConfig(10)
+```
