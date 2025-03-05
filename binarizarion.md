@@ -43,12 +43,14 @@ For this example, the output should look like this.
 It's important to separate them if needed.
 ```python
 # using the numpy library to reshape the array
+# reshaping to [5, 4]
+
 import numpy as np # importing the library
 
-X_bin_list = np.array(X_bin.list())
-X_bin_size = int(X_bin.size())
-ther_size = int(ther.getSize())
-X_reshaped = X_bin_list.reshape(int(X_bin_size/ther_size), ther_size) # reshaping to [5, 4]
+X_bin_list = np.array(X_bin.list()) # getting the array list
+num = len(X)                        # number of inputs
+ther_size = int(ther.getSize())     # divisions 4
+X_reshaped = X_bin_list.reshape(num, ther_size) 
 ```
 The output of X_reshaped:
 ```python
