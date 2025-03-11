@@ -42,9 +42,7 @@ For this example, the output should look like this.
 ```
 It's important to separate them if needed.
 ```python
-# using the numpy library to reshape the array
-import numpy as np # importing the library
-
+# passing each number as an array
 X_bin_list = [ther.transform([x]).list() for x in X]
 ```
 X_bin_list should look like this:
