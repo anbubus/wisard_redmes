@@ -47,11 +47,11 @@ import numpy as np # importing the library
 
 X_bin_list = [ther.transform([x]).list() for x in X]
 ```
-X_reshaped should look like this:
+X_bin_list should look like this:
 ```python
-array([[1, 0, 0, 0],
+[[1, 0, 0, 0],
        [1, 1, 0, 0],
        [1, 1, 0, 0],
        [1, 1, 1, 0],
-       [1, 1, 1, 0]])
+       [1, 1, 1, 0]]
 ```
