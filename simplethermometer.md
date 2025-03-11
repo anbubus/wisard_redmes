@@ -23,7 +23,7 @@ This method returns the number of divisions the thermometer has.
 ther_size = ther.getSize()
 ```
 ### transform
-This method binarizes the input data. It returns a BinInput object with all the encoded data together in a single array. 
+This method binarizes the list of input data. It returns a BinInput object with all the encoded data together in a single array. 
 ```python
 
 # load input data, set of numbers in the interval [0, 10] 
@@ -45,10 +45,7 @@ It's important to separate them if needed.
 # using the numpy library to reshape the array
 import numpy as np # importing the library
 
-X_bin_list = np.array(X_bin.list())             # getting the array list
-num = len(X)                                    # number of inputs
-ther_size = int(ther.getSize())                 # divisions 4
-X_reshaped = X_bin_list.reshape(num, ther_size) # reshaping to [5, 4]
+X_bin_list = [ther.transform([x]).list() for x in X]
 ```
 X_reshaped should look like this:
 ```python
