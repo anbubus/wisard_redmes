@@ -5,9 +5,9 @@ from wisardpkg import RegressionWisard
 
 crew = ClusRegressionWisard(
 addressSize=3            # required
-minScore,                # required
-threshold,               # required
-discriminatorsLimit,     # required
+minScore,                # optional
+threshold,               # optional
+limit,                   # optional
 completeAddressing=True  # optional
 orderedMapping=False     # optional
 mean=Mean                # optional
