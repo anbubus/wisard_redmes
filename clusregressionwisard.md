@@ -7,7 +7,7 @@ crew = ClusRegressionWisard(
 addressSize=3            # required
 minScore,                # optional
 threshold,               # optional
-limit,                   # optional
+discriminatorsLimit,     # optional
 completeAddressing=True  # optional
 orderedMapping=False     # optional
 mean=Mean                # optional
